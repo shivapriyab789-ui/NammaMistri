@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Namma Mistri (ನಮ್ಮ ಮಿಸ್ತ್ರಿ)</string>
+    <string name="calc_tab">Calculator (ಕ್ಯಾಲ್ಕುಲೇಟರ್)</string>
+    <string name="labor_tab">Labor (ಕಾರ್ಮಿಕರು)</string>
+    <string name="rates_tab">Rates (ದರಗಳು)</string>
+    <string name="photos_tab">Photos (ಫೋಟೋಗಳು)</string>
+
+    <string name="length">Length (ಉದ್ದ - ಮೀ)</string>
+    <string name="height">Height (ಎತ್ತರ - ಮೀ)</string>
+    <string name="thickness">Thickness (ದಪ್ಪ - ಮೀ)</string>
+    <string name="calculate">Calculate (ಲೆಕ್ಕ ಹಾಕಿ)</string>
+
+    <string name="bricks">Bricks (ಇಟ್ಟಿಗೆಗಳು)</string>
+    <string name="cement">Cement (ಸಿಮೆಂಟ್ ಚೀಲ)</string>
+    <string name="sand">Sand (ಮರಳು - ಲೋಡ್)</string>
+
+    <string name="worker_name">Worker Name (ಹೆಸರು)</string>
+    <string name="daily_wage">Daily Wage (ದಿನಗೂಲಿ)</string>
+    <string name="days_worked">Days Worked (ಕೆಲಸದ ದಿನಗಳು)</string>
+    <string name="advance_paid">Advance Paid (ಮುಂಗಡ ಹಣ)</string>
+    <string name="balance_due">Balance Due (ಬಾಕಿ ಹಣ)</string>
+    <string name="save_record">Save Record (ಉಳಿಸಿ)</string>
+
+    <string name="update_price">Update Price (ಬೆಲೆ ನವೀಕರಿಸಿ)</string>
+    <string name="material_price">Price (ಬೆಲೆ)</string>
+
+    <!-- Login Strings -->
+    <string name="login_title">Welcome to Namma Mistri</string>
+    <string name="login_subtitle">Please login to continue\n(ಮುಂದುವರಿಯಲು ಲಾಗಿನ್ ಮಾಡಿ)</string>
+    <string name="phone_number">Mobile Number (ಮೊಬೈಲ್ ಸಂಖ್ಯೆ)</string>
+    <string name="password">Password (ಪಾಸ್‌ವರ್ಡ್)</string>
+    <string name="login_button">Login (ಲಾಗಿನ್)</string>
+    <string name="error_empty_fields">Please enter both phone and password</string>
+
+    <!-- Labor Diary UI Strings -->
+    <string name="labor_diary_title">ಕೂಲಿ ಡೈರಿ | Labor Diary</string>
+    <string name="labor_diary_subtitle">Track attendance and wages of your team</string>
+    <string name="add_worker">+ ADD WORKER</string>
+    <string name="mark_day_end">MARK DAY END</string>
+    <string name="role">Role (ಕೆಲಸ)</string>
+    <string name="present">PRESENT</string>
+    <string name="earned">EARNED</string>
+    <string name="advance">ADVANCE</string>
+    <string name="balance">BALANCE</string>
+    <string name="add_advance">+ ADVANCE</string>
+    <string name="remove">REMOVE</string>
+</resources>
