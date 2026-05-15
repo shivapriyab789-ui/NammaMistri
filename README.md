@@ -1,83 +1,138 @@
-# Grama-Suvidha Portal (GRAMA)
+# Namma-Mistri (NAMMA-MISTRI)
 
-**Grama-Suvidha Portal** is a digital platform designed to improve transparency and communication between village administrations and their residents.
+**Namma-Mistri** is a digital service-booking platform designed to connect users with skilled local workers such as electricians, plumbers, carpenters, painters, mechanics, and other service professionals.
 
 ## 📌 Problem Statement
-In many rural areas, residents lack a reliable way to track the progress of local infrastructure projects (like road repairs or water works). This lack of transparency leads to misinformation and a slow feedback loop. Administrative tasks are often handled manually, making it difficult to keep the public updated in real-time.
 
-This project solves this by providing a **Village Digital Notice Board** where every project's status, budget, and progress are visible to everyone, alongside a direct channel for citizen feedback.
+In many urban and semi-urban areas, people struggle to quickly find reliable workers for household repairs and maintenance tasks. Most users depend on local references or contacts, which can be time-consuming and unreliable. Skilled workers also face difficulties in getting regular job opportunities because of limited digital visibility.
 
-## 🚀 Features
+This project solves the problem by providing a **Smart Local Service Platform** where users can easily discover nearby workers, view ratings and experience, book services, and communicate directly through a simple mobile application.
 
-### For Residents
-*   **Village Digital Notice Board**: A live dashboard showing **Ongoing**, **Completed**, and **Planned** projects.
-*   **Detailed Project Tracking**: View specific details for every work item, including budget splits, completion percentages, and timelines.
-*   **Bilingual Interface**: Seamlessly switch between **English** and **Kannada** to ensure all community members can use the app.
-*   **Feedback & Issue Reporting**: A dedicated section to rate works and report local issues directly to authorities.
+---
 
-### For Administrators
-*   **Admin Authentication**: Secure login for authorized personnel.
-*   **Project Management**: Add new village projects or update existing ones (change status, edit progress, modify descriptions).
-*   **Centralized Data**: A single source of truth for all village infrastructure development.
+# 🚀 Features
 
-## 🛠 Tech Stack
-*   **Language**: Kotlin
-*   **Architecture**: MVVM (Model-View-ViewModel)
-*   **Database**: Room Persistence Library (SQLite)
-*   **Navigation**: Jetpack Navigation Component
-*   **UI Components**: Material Design 3, View Binding
-*   **Image Loading**: Coil
+## For Customers
 
-## 📸 Screenshots (Placeholders)
-| Project List | Project Detail | Admin Dashboard |
-| :---: | :---: | :---: |
-| ![List View](https://via.placeholder.com/200x400?text=Project+List) | ![Detail View](https://via.placeholder.com/200x400?text=Project+Detail) | ![Admin Dashboard](https://via.placeholder.com/200x400?text=Admin+Dashboard) |
+* **Service Categories Dashboard**: Browse different worker categories such as Electrician, Plumber, Carpenter, Painter, Mechanic, etc.
+* **Worker Profile View**: View worker details including experience, ratings, availability, and contact information.
+* **Quick Service Booking**: Book services easily with preferred date and time.
+* **Location-Based Search**: Find nearby workers quickly using location services.
+* **Ratings & Reviews**: Provide feedback and ratings after service completion.
+* **Booking History**: Track ongoing and completed bookings.
 
-## 📦 Installation & Setup
+## For Workers
 
-### Prerequisites
-*   **Android Studio** (Ladybug or newer).
-*   **JDK 17**.
-*   **Android SDK 24+**.
+* **Worker Registration**: Skilled workers can create profiles and register their services.
+* **Availability Management**: Update working availability status.
+* **Booking Notifications**: Receive customer booking requests instantly.
+* **Digital Visibility**: Increase reach and connect with more customers.
 
-### Steps to Setup
-1.  **Clone the Repository**:
-    ```bash
-    git clone https://github.com/Navya/GRAMA.git
-    ```
-2.  **Open the Project**:
-    Open Android Studio -> **File** -> **Open** -> Select the `GRAMA` folder.
-3.  **Sync Gradle**:
-    Android Studio will automatically prompt to sync. Click **Sync Now** and wait for it to complete.
-4.  **Run the Project**:
-    *   Connect your Android device or start an emulator.
-    *   Click the **Run** (Green Arrow) button in the top toolbar.
-    *   Or use terminal: `./gradlew installDebug`
+---
 
-### Default Admin Credentials
-For testing purposes, use the following credentials to access the admin features:
-*   **Username**: `admin`
-*   **Password**: `admin123`
+# 🛠 Tech Stack
 
-## 📁 Folder Structure
-```text
-GRAMA/
+* **Language**: Kotlin
+* **Architecture**: MVVM (Model-View-ViewModel)
+* **Database**: Firebase Realtime Database / Room Database
+* **Authentication**: Firebase Authentication
+* **Navigation**: Jetpack Navigation Component
+* **UI Components**: Material Design 3, View Binding
+* **Image Loading**: Coil / Glide
+* **Asynchronous Operations**: Kotlin Coroutines & StateFlow
+
+---
+
+# 📸 Screenshots (Placeholders)
+
+|                          Home Screen                          |                            Worker Profile                           |                            Booking Screen                           |
+| :-----------------------------------------------------------: | :-----------------------------------------------------------------: | :-----------------------------------------------------------------: |
+| ![Home](https://via.placeholder.com/200x400?text=Home+Screen) | ![Profile](https://via.placeholder.com/200x400?text=Worker+Profile) | ![Booking](https://via.placeholder.com/200x400?text=Booking+Screen) |
+
+---
+
+# 📦 Installation & Setup
+
+## Prerequisites
+
+* **Android Studio** (Ladybug or newer)
+* **JDK 17**
+* **Android SDK 24+**
+
+---
+
+## Steps to Setup
+
+### 1. Download or Clone the Repository
+
+```bash id="g4d7px"
+git clone https://github.com/shivapriyab789-ui/NammaMistri.git
+```
+
+### 2. Open the Project
+
+Open Android Studio → **File** → **Open** → Select the `NammaMistri` folder.
+
+### 3. Sync Gradle
+
+Android Studio will automatically ask to sync Gradle files. Click **Sync Now** and wait for completion.
+
+### 4. Run the Project
+
+* Connect your Android device or start an emulator.
+* Click the **Run** (▶) button in Android Studio.
+
+Or use terminal:
+
+```bash id="7wx7vw"
+./gradlew installDebug
+```
+
+---
+
+# 🔐 Default Test Credentials
+
+## Customer Login
+
+* **Phone numaber**: `4657424257`
+* **Password**: `user123`
+
+## Worker Login
+
+* **Phone numaber**: `4657424258`
+* **Password**: `worker123`
+
+---
+
+# 📁 Folder Structure
+
+```text id="krph5w"
+NAMMA-MISTRI/
 ├── app/
-│   ├── src/main/java/com/gramasuvidha/portal/
-│   │   ├── data/           # Room DB, Entities, Repositories
-│   │   ├── ui/             # UI Fragments and ViewModels
-│   │   └── util/           # Helpers (Localization, etc.)
-│   ├── src/main/res/       # Layouts, Strings (EN/KN), Drawables
-│   └── build.gradle.kts    # Module config
-├── build.gradle.kts        # Project config
+│   ├── src/main/java/com/nammamistri/
+│   │   ├── data/           # Database, Models, Repositories
+│   │   ├── ui/             # Activities, Fragments, ViewModels
+│   │   ├── auth/           # Login & Registration
+│   │   └── util/           # Helper Classes & Utilities
+│   ├── src/main/res/       # Layouts, Drawables, Strings
+│   └── build.gradle.kts    # Module-level Gradle
+├── build.gradle.kts        # Project-level Gradle
 └── README.md               # Documentation
 ```
 
-## 🛠 Future Improvements
-*   **Push Notifications**: Notify residents when a new project is planned or a milestone is reached.
-*   **GPS Reporting**: Attach geo-locations to reported issues for faster resolution.
-*   **Cloud Sync**: Move from local Room storage to a Firebase/Realtime backend.
-*   **Multimedia**: Support for residents to upload photos of issues.
+---
 
-## 📄 License
+# 🛠 Future Improvements
+
+* **Live Worker Tracking**: Real-time worker location tracking.
+* **In-App Chat**: Messaging between customer and worker.
+* **Online Payments**: UPI and payment gateway integration.
+* **Multi-Language Support**: Kannada, Hindi, Tamil, and Telugu support.
+* **Push Notifications**: Booking updates and alerts.
+* **AI Recommendations**: Smart worker suggestions based on ratings and location.
+
+---
+
+# 📄 License
+
 This project is licensed under the MIT License.
