@@ -1,0 +1,89 @@
+# Namma-Mistri - Mock API & Data Structure Documentation
+
+This document outlines the data structure used for simulating worker, booking, and feedback data in the Namma-Mistri application.
+
+## 1. Worker Entity Structure
+
+The worker details are stored locally using Room Database or Firebase and initialized in `NammaMistriApplication.kt`.
+
+| Field                | Type    | Description                                             |
+| :------------------- | :------ | :------------------------------------------------------ |
+| `workerId`           | String  | Unique identifier for the worker (e.g., "WRK-001")      |
+| `name`               | String  | Name of the worker                                      |
+| `profession`         | String  | Worker category (Electrician, Plumber, Carpenter, etc.) |
+| `experience`         | Int     | Years of experience                                     |
+| `phoneNumber`        | String  | Contact number of the worker                            |
+| `address`            | String  | Worker location/address                                 |
+| `availabilityStatus` | Boolean | Availability status of the worker                       |
+| `rating`             | Float   | Average customer rating                                 |
+| `serviceCharge`      | String  | Estimated service cost                                  |
+| `profileImageUrl`    | String  | URL of worker profile image                             |
+| `description`        | String  | Brief description of worker skills                      |
+
+---
+
+## 2. Booking Entity Structure
+
+This structure handles customer booking details for different services.
+
+| Field             | Type   | Description                                                 |
+| :---------------- | :----- | :---------------------------------------------------------- |
+| `bookingId`       | String | Unique booking identifier                                   |
+| `customerName`    | String | Name of the customer                                        |
+| `workerId`        | String | ID of the booked worker                                     |
+| `serviceType`     | String | Type of requested service                                   |
+| `bookingDate`     | String | Selected booking date                                       |
+| `bookingTime`     | String | Selected booking time                                       |
+| `bookingStatus`   | String | Status of booking (Pending, Accepted, Completed, Cancelled) |
+| `customerAddress` | String | Address for the service                                     |
+| `customerPhone`   | String | Customer contact number                                     |
+
+---
+
+## 3. Feedback & Review Entity Structure
+
+This structure stores customer ratings and service reviews.
+
+| Field           | Type   | Description                             |
+| :-------------- | :----- | :-------------------------------------- |
+| `feedbackId`    | Int    | Auto-generated primary key              |
+| `workerId`      | String | ID of the worker receiving feedback     |
+| `customerName`  | String | Name of the customer                    |
+| `rating`        | Int    | Customer rating (1 to 5 stars)          |
+| `reviewMessage` | String | Review or feedback message              |
+| `timestamp`     | Long   | System time when feedback was submitted |
+
+---
+
+## 4. Localization Strategy
+
+The application is designed to support multilingual functionality using Android string resources for future expansion.
+
+* **Default Language:** English
+
+* **Planned Languages:** Kannada, Hindi, Tamil, Telugu
+
+* **Example JSON Representation (Mocked):**
+
+```json
+{
+  "workerId": "WRK-001",
+  "name": "Ramesh",
+  "profession": "Electrician",
+  "experience": 5,
+  "rating": 4.5,
+  "availabilityStatus": true
+}
+```
+
+---
+
+## 5. Implementation Details
+
+* **Database:** Android Room Persistence Library / Firebase Realtime Database
+* **Initialization:** Mock worker and booking data are pre-populated in `NammaMistriApplication.onCreate()` to simulate API responses.
+* **Authentication:** Firebase Authentication
+* **Images:** Loaded dynamically using Coil or Glide from external image URLs.
+* **Offline Support:** Room Database caching enables offline data access.
+* **Architecture:** MVVM (Model-View-ViewModel)
+* **Asynchronous Operations:** Kotlin Coroutines and StateFlow for reactive updates.
