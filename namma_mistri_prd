@@ -1,0 +1,161 @@
+# Product Requirements Document (PRD): Namma-Mistri
+
+**Project Name:** Namma-Mistri
+**Version:** 1.0
+**Internship:** MindMatrix Android App Development using Gen AI
+**Developer:** Shivapriya B
+
+---
+
+# 1. Executive Summary
+
+Namma-Mistri is a mobile-first service booking application designed to connect users with skilled local workers such as electricians, plumbers, carpenters, painters, mechanics, and other daily service professionals. The application simplifies the process of finding reliable workers nearby and enables users to book services quickly through a simple and user-friendly interface.
+
+The platform focuses on supporting local workers by increasing visibility while providing customers with easy access to trusted services.
+
+---
+
+# 2. Problem Statement
+
+In many towns and semi-urban areas, people face difficulties finding skilled workers quickly during emergencies or household maintenance tasks. Common challenges include:
+
+* **Lack of Accessibility:** Difficulty finding nearby skilled workers.
+* **Trust Issues:** No proper platform to verify service providers.
+* **Communication Gap:** Customers and workers struggle to coordinate efficiently.
+* **Time Consumption:** Searching manually through contacts and references takes time.
+* **Limited Digital Presence:** Many local workers lack online visibility.
+
+---
+
+# 3. Goals and Objectives
+
+* **Quick Service Booking:** Enable users to book local workers instantly.
+* **Support Local Workers:** Provide a digital platform for skilled laborers.
+* **Easy Navigation:** Offer a clean and beginner-friendly UI.
+* **Category-Based Search:** Allow users to browse workers by profession.
+* **Reliable Communication:** Simplify contact between customers and workers.
+* **Affordable Digital Solution:** Create a lightweight Android application accessible to all users.
+
+---
+
+# 4. Target Audience
+
+* **House Owners & Residents:** Users needing household repair and maintenance services.
+* **Local Skilled Workers:** Electricians, plumbers, carpenters, painters, mechanics, etc.
+* **Small Businesses:** Shops or offices requiring maintenance services.
+* **Students & Working Professionals:** Users looking for quick service solutions.
+
+---
+
+# 5. Functional Requirements (User Stories)
+
+| ID     | User Story                                                      | Feature                    |
+| **F1** | As a user, I want to browse different worker categories.        | **Service Categories**     |
+| **F2** | As a user, I want to view worker details and ratings.           | **Worker Profile View**    |
+| **F3** | As a user, I want to book a service quickly.                    | **Service Booking System** |
+| **F4** | As a user, I want to contact workers directly.                  | **Call & Contact Feature** |
+| **F5** | As a user, I want to search for nearby workers.                 | **Location-Based Search**  |
+| **F6** | As a user, I want to provide feedback after service completion. | **Ratings & Reviews**      |
+| **F7** | As a worker, I want to register my service details.             | **Worker Registration**    |
+| **F8** | As a user, I want to see booking history.                       | **Booking Management**     |
+
+---
+
+# 6. Technical Specifications
+
+## Architecture & Tech Stack
+
+* **Pattern:** MVVM (Model-View-ViewModel)
+* **Language:** Kotlin
+* **Database:** Firebase Realtime Database / Room Database
+* **Authentication:** Firebase Authentication
+* **UI Design:** Material Design 3
+* **Navigation:** Jetpack Navigation Component
+* **Image Loading:** Coil / Glide
+* **Asynchronous Tasks:** Kotlin Coroutines
+* **State Management:** LiveData / StateFlow
+
+---
+
+## Data Model (Core Entities)
+
+### **WorkerEntity**
+
+* Worker ID
+* Name
+* Profession
+* Experience
+* Phone Number
+* Address
+* Availability Status
+* Ratings
+* Profile Image
+
+### **BookingEntity**
+
+* Booking ID
+* User Name
+* Worker ID
+* Service Type
+* Date & Time
+* Booking Status
+
+### **FeedbackEntity**
+
+* User ID
+* Worker ID
+* Rating
+* Review Message
+* Timestamp
+
+---
+
+# 7. Non-Functional Requirements
+
+* **Performance:** Fast loading and responsive UI.
+* **Usability:** Simple navigation suitable for all age groups.
+* **Reliability:** Stable booking and contact system.
+* **Security:** User authentication and protected user data.
+* **Scalability:** Ability to add more service categories in the future.
+* **Accessibility:** Lightweight application for low-end Android devices.
+
+---
+
+# 8. User Flow
+
+1. **Launch:** User opens the application.
+2. **Authentication:** User logs in or registers.
+3. **Home Screen:** User views available service categories.
+4. **Browse:** User selects a category (Electrician, Plumber, Carpenter, etc.).
+5. **Worker Details:** User checks profiles, ratings, and availability.
+6. **Booking:** User books a worker for a selected service.
+7. **Confirmation:** Worker receives booking details.
+8. **Completion:** User gives feedback and ratings after service completion.
+
+---
+
+# 9. Generative AI Integration
+
+AI tools were used during the development lifecycle for:
+
+* **Code Generation:** Creating boilerplate Android and Firebase integration code.
+* **UI Design Assistance:** Generating Material 3 screen layouts and UI ideas.
+* **Debugging:** Resolving Android Studio and API integration issues.
+* **Content Suggestions:** Creating descriptions, category labels, and app content.
+* **Documentation:** Assisting in generating project reports and PRD documentation.
+
+---
+
+# 10. Future Roadmap
+
+* **Live Worker Tracking:** Real-time location tracking of workers.
+* **In-App Chat:** Direct messaging between customer and worker.
+* **Online Payments:** UPI and digital payment integration.
+* **Multi-Language Support:** Kannada, Hindi, Tamil, and Telugu support.
+* **AI-Based Recommendations:** Suggesting workers based on user preferences and ratings.
+* **Admin Dashboard:** Monitoring bookings, workers, and customer feedback.
+
+---
+
+**Prepared by:** Shivapriya B
+**Date:** January 2025
